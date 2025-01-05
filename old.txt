@@ -1,0 +1,243 @@
+
+            <nav class="navBar">
+                <!-- Mobile -->
+                <div class="navBar--mobile">
+                    <ul class="mobile--items">
+                        <li><img src="./image/burger.jpg" alt></li>
+                        <li><img src="./image/Group.jpg" alt></li>
+                        <!-- seperate  bar-->
+                        <li class="navBar--mobile__line"></li>
+                        <li><img src="./image/repair.jpg" alt></li>
+                        <li><img src="./image/checkstatus.png" alt></li>
+                    </ul>
+                    <!-- tablet -->
+                    <div class="tablet">
+                        <ul class="tablet--items__start">
+                            <li><img src="./image/burger.jpg" alt></li>
+                            <!-- seperate  bar-->
+                            <li class="navBar--mobile__line"></li>
+                            <li><img src="./image/Group.jpg" alt></li>
+                        </ul>
+                        <ul class="tablet--items__end">
+                            <li><img src="./image/call.png" alt></li>
+                            <li><img src="./image/chat.png" alt></li>
+                            <li><img src="./image/profile.png" alt></li>
+                            <!-- seperate  bar-->
+                            <li class="navBar--mobile__line"></li>
+                            <li><img src="./image/repair.jpg" alt></li>
+                            <li><img src="./image/checkstatus.png" alt></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!--aside -->
+            <aside>
+                <!-- aside  copy-->
+                <div class="sibebar">
+                    <section id="image">
+                        <div class="items">
+                            <div class="image__item">
+                                <img src="./image/cancel.png" alt>
+                                <img src="./image/Group.jpg" alt>
+                            </div>
+                            <div class="image__search">
+                                <img src="./image/search.png" alt>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="menu">
+                        <div class="menu_title">
+                            <div class="navibar">
+                                <div class="navibar__head">
+                                    <div class="navibar__head--line"></div>
+                                    <h3 class="navibar__head--txt">Equipment
+                                        Repair</h3>
+                                </div>
+                                <ul class="navibar__menu">
+                                    <li>Services</li>
+                                    <li>For Corperate Clients</li>
+                                    <li>For Equipment Sellers</li>
+                                    <li>For Partners</li>
+                                    <li>For Menufacturers</li>
+                                    <li>Our Service Centers</li>
+                                    <li>Contacts</li>
+                                </ul>
+                            </div>
+                            <div class="infor">
+                                <div class="infor__image">
+                                    <img src="./image/call.png" alt="call">
+                                    <img src="./image/chat.png" alt>
+                                    <img src="./image/profile.png" alt>
+                                </div>
+                                <p>dul.ros07@gmail.com</p>
+                                <h1>010 7312 1770</h1>
+
+                                <!-- Language -->
+                                <div class="infor__lang">
+                                    <button>KH</button>
+                                    <button>ENG</button>
+                                    <button>CH</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </section>
+                </div>
+            </aside>
+
+            <!-- Desktop -->
+            <section id="main-article">
+                <div class="mainHead">
+                    <!-- text header -->
+                    <div class="header">
+                        <div class="header--bar"></div>
+                        <h1 class="header--text">Service</h1>
+                    </div>
+                    <!-- image nav -->
+                    <div class="navMenu">
+                        <div class="navMenu__card">
+                            <h2 class="navMenu__card--text">Submit a
+                                Request</h2>
+                            <img src="./image/repair.jpg" alt>
+                        </div>
+                        <div class="navMenu__card">
+                            <h2 class="navMenu__card--text">Repair Status</h2>
+                            <img src="./image/checkstatus.png" alt>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="menu">
+                <!-- tablete -->
+                <div class="menu__tablete">
+                    <button> Repairable Devices</button>
+                    <button>Additional Sevices</button>
+                    <button>Service Prices</button>
+                    <button>Specail Prices</button>
+                </div>
+                <!-- destop -->
+                <div class="menu__destop">
+                    <button>Brands We Repair</button>
+                    <button>Repairable Devices</button>
+                    <button>Service Prices</button>
+                    <button>Service Center Location</button>
+                    <button>Specail Prices</button>
+                    <button>Reviews</button>
+                </div>
+            </section>
+
+            <main class="articles">
+                <div class="articles__text">
+                    <p>We are an authorized service center for Dell equipment
+                        repair.
+                        Only with us can you repair your Dell laptop with the
+                        official manufacturer's warranty.
+                    </p>
+                    <p>We have been operating successfully since 1992 and have
+                        earned a reputation as a reliable partner.<span>
+                            We take pride in the fact that people come to us
+                            based
+                            on recommendations and, in turn, recommend us to
+                            their
+                            family and friends.</span></p>
+
+                    <button class="articles__button">
+                        <img src="./image/expand.png" alt>Read more
+                    </button>
+                </div>
+                <div class="articles__image">
+                    <img src="./image/Picture Copy.jpg" alt>
+                </div>
+            </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             <!--aside for mobile -->
+                <aside>
+                    <!-- aside  copy-->
+                    <div class="sibebar">
+                        <section id="image">
+                            <div class="items">
+                                <div class="image__item">
+                                    <img src="./image/cancel.png" alt>
+                                    <img src="./image/Group.jpg" alt>
+                                </div>
+                                <div class="image__search">
+                                    <img src="./image/search.png" alt>
+                                </div>
+                            </div>
+                        </section>
+                        <section id="menu">
+                            <div class="menu_title">
+                                <div class="navibar">
+                                    <div class="navibar__head">
+                                        <div class="navibar__head--line"></div>
+                                        <h3 class="navibar__head--txt">Equipment
+                                            Repair</h3>
+                                    </div>
+                                    <ul class="navibar__menu">
+                                        <li>Services</li>
+                                        <li>For Corperate Clients</li>
+                                        <li>For Equipment Sellers</li>
+                                        <li>For Partners</li>
+                                        <li>For Menufacturers</li>
+                                        <li>Our Service Centers</li>
+                                        <li>Contacts</li>
+                                    </ul>
+                                </div>
+                                <div class="infor">
+                                    <div class="infor__image">
+                                        <img src="./image/call.png" alt="call">
+                                        <img src="./image/chat.png" alt>
+                                        <img src="./image/profile.png" alt>
+                                    </div>
+                                    <p>dul.ros07@gmail.com</p>
+                                    <h1>010 7312 1770</h1>
+    
+                                    <!-- Language -->
+                                    <div class="infor__lang">
+                                        <button>KH</button>
+                                        <button>ENG</button>
+                                        <button>CH</button>
+                                    </div>
+                                </div>
+    
+                            </div>
+    
+                        </section>
+                    </div>
+                </aside>
+
+
+
+
+                /* Aside desktop */
+    .container__aside{
+        display: none;
+    }
+    .sibebar{
+        display: none;
+    }
