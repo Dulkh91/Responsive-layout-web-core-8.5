@@ -241,3 +241,30 @@
     .sibebar{
         display: none;
     }
+
+
+
+
+
+    // card
+
+     <!-- Card 1-->
+                                            <figure class="card-prices">
+                                                <article class="card-prices__contain--txt">
+                                                  <h3>Repair Services</h3>
+                                                  <p>Testing with a technical report issuance</p>
+                                                  <h3>Price</h3>
+                                                  <p>Free</p>
+                                                  <h3>Time</h3>
+                                                  <p>30-120min</p>
+                                                </article>
+                                                <button class="card-prices__contain--btn">
+                                                  ORDER
+                                                  <span
+                                                    class="material-symbols-outlined card-prices__contain--btn--color"
+                                                  >
+                                                    arrow_forward_ios
+                                                  </span>
+                                                </button>
+                                              </figure>
+                                    

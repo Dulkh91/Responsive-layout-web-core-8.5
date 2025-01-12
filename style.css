@@ -30,8 +30,8 @@ body {
   justify-content: space-between;
   padding: 15px;
 }
-.navBar--mobile{
-    width: 100%;
+.navBar--mobile {
+  width: 100%;
 }
 .navBar--mobile__line {
   border: 1px solid #eaeaea;
@@ -250,18 +250,16 @@ body {
 }
 
 /* Card style lists */
-.container__card-lists{
-    margin-top: 30px;
+.container__card-lists {
+  margin-top: 30px;
 }
 .titles-contain {
   background-image: linear-gradient(to right, #f8f8f8, #ffff);
   /* background-color: red; */
-
 }
 .titles-contain__text {
   margin: 15px 30px auto;
   padding: 15px 0;
-
 }
 .titles-contain__text h1 {
   color: #7e7e82;
@@ -305,8 +303,8 @@ body {
   border-radius: 50%;
   margin-left: 15px;
 }
-.circleCard__arrow--color{
-    color: #FF3E79;
+.circleCard__arrow--color {
+  color: #ff3e79;
 }
 .pageNation {
   display: none;
@@ -350,37 +348,94 @@ body {
 }
 
 /* Device repair */
-.deviceCard{
-    width: 224px;
-    height: 160px;
-    background-color: #FFFFFF;
-    border-radius: 6px;
-    position: relative;
+.deviceCard {
+  width: 224px;
+  height: 160px;
+  background-color: #ffffff;
+  border-radius: 6px;
+  position: relative;
 }
-.deviceCard__text{
-    font-size: 1rem;
-    position: absolute;
-    color: #1B1C21;
-    margin: 10px;
+.deviceCard__text {
+  font-size: 1rem;
+  position: absolute;
+  color: #1b1c21;
+  margin: 10px;
 }
-.deviceCard__btn{
-    display: grid;
-    place-items: center;
-    width: 40px;
-    height: 40px;
-    border: 2px solid #FF3E79;
-    border-radius: 50%;
-    cursor: pointer;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    margin: 10px;
+.deviceCard__btn {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #ff3e79;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 10px;
 }
-.deviceCard__arrow--color{
-    color: #FF3E79;
+.deviceCard__arrow--color {
+  color: #ff3e79;
+}
+/* SERVICE Prices */
+.card-prices__contain--btn {
+  position: relative;
+  width: 119px;
+  height: 32px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 16px;
+  border: none;
+  color: #ffffff;
+  background-color: #ff3e79;
+  cursor: pointer;
+}
+.card-prices__contain--btn--color {
+  position: absolute;
+  font-size: 12px;
+  font-weight: bold;
+  right: 10px;
+}
+/* Table SERVICE PRICES */
+
+table{
+  width: 95%;
+  margin: 10px auto;
+  border-collapse: collapse;
+}
+table thead{
+  text-align: left;
+  font-size: 14px;
+  color: #7E7E82;
+}
+table tbody{
+  font-size: 14px;
+  color:  #7E7E82;
+  background-color: #FFFFFF;
+}
+tbody td:last-child{
+  text-align: right;
+  display: flex;
+  justify-content: end;
+}
+tbody td:not(:last-child){
+  border-bottom: 1px solid #EAEAEA;
+
 }
 
-
+tbody tr td{
+  padding: 10px;
+}
+thead th, 
+tbody td{
+  padding: 10px;
+}
+table tbody td{
+  border-radius: 6px;
+}
 /* Mobile image */
 /* media phone */
 @media only screen and (max-width: 767px) {
@@ -440,7 +495,7 @@ body {
     height: 100%;
   }
   .swiper-slide {
-    text-align: center;
+    /* text-align: center; */
     display: flex !important;
     justify-content: center;
     align-items: center;
@@ -460,6 +515,59 @@ body {
   .btnToggle {
     display: none;
   }
+
+/* Service price  style*/
+.card-prices {
+  width: 260px;
+  height: 200px;
+  background-color: #ffffff;
+  border-radius: 6px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-prices__contain--txt {
+  margin: 20px 0 0 15px;
+}
+.card-prices__contain--txt h3 {
+  margin: 0 0 5px;
+  font-size: 14px;
+  color: #7e7e82;
+}
+.card-prices__contain--txt p {
+  margin: 0 0 20px;
+  font-size: 14px;
+  color: #1b1c21;
+}
+.card-prices__contain--btn {
+  position: absolute;
+  right: 15px;
+  bottom: 10px;
+  width: 119px;
+  height: 32px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 16px;
+  border: none;
+  color: #ffffff;
+  background-color: #ff3e79;
+  cursor: pointer;
+}
+.card-prices__contain--btn--color {
+  position: absolute;
+  font-size: 12px;
+  font-weight: bold;
+  right: 10px;
+}
+.d-service-price{
+  display: none;
+}
+
 }
 
 /* media tablete */
@@ -490,7 +598,7 @@ body {
   .titles__text {
     margin: 15px 20px;
   }
-  .cards {
+  .cards{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
@@ -510,12 +618,23 @@ body {
     display: flex;
     flex-wrap: wrap;
   }
-  .container__card-lists{
+  .container__card-lists {
     flex-grow: 1;
     flex-basis: 200;
   }
-  .swiper-wrapper{
+  .swiper-wrapper {
     display: block;
+  }
+  /* Device repair of swiper */
+  .device-swiper__card {
+    display: flex;
+  }
+  .device-swiper__card > .swiper-slide {
+    flex-shrink: 1;
+  }
+  /* SERVICE Prices */
+  .m-service-price{
+    display: none;
   }
 }
 
@@ -548,12 +667,27 @@ body {
     display: flex;
     flex-wrap: wrap;
   }
-  .container__card-lists{
+  .container__card-lists {
     flex-grow: 1;
     flex-basis: 200;
   }
-  .swiper-wrapper{
+  .swiper-wrapper {
     display: block;
   }
 
+  /* Device repair of swiper */
+  .device-swiper{
+    margin:  25px 20px;
+  }
+  .device-swiper__card {
+    display: flex;
+  }
+  .device-swiper__card > .swiper-slide {
+    flex-shrink: 1;
+  }
+  /* SERVICE Prices */
+  .m-service-price{
+    display: none;
+  }
+  
 }

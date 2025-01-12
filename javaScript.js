@@ -1,10 +1,7 @@
-
-let btnTongles = false;
-let btn = document.getElementById("tongleBtn");
-let txtValue = document.getElementById("btnTxt");
+let btn = document.querySelectorAll("#tongleBtn");
+let txtValue = document.querySelectorAll("#btnTxt");
 let cards = document.querySelector(".cards");
-let swiperInstance;
-
+let swiperInstance, swiperTwo, swiperThree;
 const newCard = `
                <div class="swiper-slide addCard">
                         <div class="card">
@@ -41,21 +38,45 @@ const newCard = `
                         </div>
                     </div>`;
 
-// Toggle Button Logic
-btn.addEventListener("click", () => {
-  if (!btnTongles) {
-    btnTongles = true;
-    txtValue.innerHTML = "Hide";
-    document.getElementById("btnRow").style.transform = "rotate(-90deg)";
+// Toggle Button Logic & Set value button by index
+let btnTongles = Array(btn.length).fill(false);
+btn.forEach((e, index) => {
 
-    cards.insertAdjacentHTML("beforeend", newCard);
-  } else {
-    btnTongles = false;
-    txtValue.innerHTML = "Show All";
-    document.getElementById("btnRow").style.transform = "rotate(90deg)";
-    const toggleCard = cards.querySelectorAll(".addCard");
-    toggleCard.forEach((cardAdd) => cardAdd.remove());
-  }
+  
+
+  e.addEventListener("click", () => {
+
+    if (!btnTongles[index]) {
+      btnTongles[index] = true;
+
+      //update text when click btn
+      txtValue[index].innerHTML = "Hide";
+
+      //change event btn when click
+      document.querySelectorAll("#btnRow")[index].style.transform =
+        "rotate(-90deg)";
+
+      if (index === 0) {
+        cards.insertAdjacentHTML("beforeend", newCard);
+      }
+    } else {
+      btnTongles[index] = false;
+    
+      txtValue[index].innerHTML = "Read more"
+
+      txtValue[index].innerHTML = "Show All";
+
+      // Rotate the clicked button's row back
+      document.querySelectorAll("#btnRow")[index].style.transform =
+        "rotate(90deg)";
+
+      // Remove cards if this is the first button
+      if (index === 0) {
+        const toggleCard = cards.querySelectorAll(".addCard");
+        toggleCard.forEach((cardAdd) => cardAdd.remove());
+      }
+    }
+  });
 });
 
 // Manage Swiper Based on Screen Size
@@ -71,16 +92,31 @@ function widthOfScreen() {
     }
     // Initialize Swiper if not already initialized
     if (!swiperInstance) {
-        swiperInstance = new Swiper(".mySwiper", {
-            spaceBetween: 30,
-            pagination: {
-              el: ".swiper-pagination",
-              clickable: true,
-            },
-          });
+      swiperInstance = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination-one",
+          clickable: true,
+        },
+      });
+
+      swiperTwo = new Swiper(".mySwiperTwo", {
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination-two",
+          clickable: true,
+        },
+      });
+
+      swiperThree = new Swiper(".mySwiperThree", {
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination-three",
+          clickable: true,
+        },
+      });
     }
-  }else{
-    
+  } else {
     cards.classList.remove("swiper-wrapper");
     card.forEach((item) => item.classList.remove("swiper-slide"));
 
@@ -88,6 +124,12 @@ function widthOfScreen() {
     if (swiperInstance) {
       swiperInstance.destroy(true, true);
       swiperInstance = null;
+
+      swiperTwo.destroy(true, true);
+      swiperTwo = null;
+
+      swiperThree.destroy(true, true);
+      swiperThree = null
     }
   }
 }

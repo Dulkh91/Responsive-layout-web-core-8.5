@@ -1,0 +1,18 @@
+{
+  "name": "5-task",
+  "version": "1.0.0",
+  "main": "javaScript.js",
+  "scripts": {
+    "eslint": "eslint ./"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@eslint/js": "^9.18.0",
+    "eslint": "^9.18.0",
+    "globals": "^15.14.0",
+    "prettier": "^3.4.2"
+  }
+}
