@@ -38,19 +38,21 @@ const newCard = `
                         </div>
                     </div>`;
 
+//Delare value of card-prices on screen
+let numberCards = 4;
+pricesToggle(numberCards);
+
 // Toggle Button Logic & Set value button by index
 let btnTongles = Array(btn.length).fill(false);
 btn.forEach((e, index) => {
-
-  
-
   e.addEventListener("click", () => {
+    numberCards = 7;
 
     if (!btnTongles[index]) {
       btnTongles[index] = true;
-
       //update text when click btn
       txtValue[index].innerHTML = "Hide";
+      numberCards = 7;
 
       //change event btn when click
       document.querySelectorAll("#btnRow")[index].style.transform =
@@ -61,9 +63,8 @@ btn.forEach((e, index) => {
       }
     } else {
       btnTongles[index] = false;
-    
-      txtValue[index].innerHTML = "Read more"
-
+      txtValue[index].innerHTML = "Read more";
+      numberCards = 4;
       txtValue[index].innerHTML = "Show All";
 
       // Rotate the clicked button's row back
@@ -76,6 +77,7 @@ btn.forEach((e, index) => {
         toggleCard.forEach((cardAdd) => cardAdd.remove());
       }
     }
+    pricesToggle(numberCards);
   });
 });
 
@@ -129,9 +131,71 @@ function widthOfScreen() {
       swiperTwo = null;
 
       swiperThree.destroy(true, true);
-      swiperThree = null
+      swiperThree = null;
     }
   }
 }
 window.onload = widthOfScreen;
 window.onresize = widthOfScreen;
+
+function pricesToggle(maxCardPrice) {
+  const cardPrices = document.querySelectorAll(".deviceCard");
+  cardPrices.forEach((item, index) => {
+    if (index >= maxCardPrice) {
+      //if true we take item by number and left add "none"
+      item.style.display = "none";
+    } else {
+      item.style.display = "block";
+    }
+  });
+}
+
+// BURGER Button Navbar
+const sidebar = document.querySelector(".sibebar");
+const asideContain = document.querySelector(".aside__container");
+
+document.querySelector(".burger__btn").addEventListener("click", () => {
+  sidebar.style.display = "block";
+  asideContain.classList.add("nabar-popup");
+  // body.style.backgroundColor = "red"
+});
+
+
+// BURGER CLOSE Navbar
+document.querySelector(".close__btn").addEventListener("click", (event) => {
+  asideContain.classList.remove("nabar-popup")
+  if(event.target !=asideContain){
+    sidebar.style.display = "none"
+  }
+});
+
+// SIDEBAR RIGHT SHOW 
+//repair show
+const sibebarRight = document.querySelector(".sidebar-right")
+const cardBar = document.querySelector(".submit__container")
+document.querySelector(".repair__btn").addEventListener("click",()=>{
+    cardBar.style.display = "block"
+    sibebarRight.classList.add("nabar-popup")
+})
+//show tablet 
+document.querySelector(".repair__btn--tablet").addEventListener("click",()=>{
+  cardBar.style.display = "block"
+  sibebarRight.classList.add("nabar-popup")
+})
+//SIDEBAR RIGHT HIDE
+document.querySelectorAll(".close__btn--right").forEach((item)=>{
+  item.addEventListener("click",()=>{
+    cardBar.style.display = "none"
+    sibebarRight.classList.remove("nabar-popup")
+    //cards order call
+    document.querySelector(".order__container").style.display = "none"
+  })
+})
+// order show
+document.querySelectorAll(".order__btn").forEach((item)=>{
+    item.addEventListener("click",()=>{
+      document.querySelector(".order__container").style.display = "block"
+      sibebarRight.classList.add("nabar-popup")
+    })
+})
+

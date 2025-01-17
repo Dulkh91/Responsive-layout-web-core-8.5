@@ -268,3 +268,279 @@
                                                 </button>
                                               </figure>
                                     
+
+
+
+ដដដដដ
+
+
+  <!-- Device repair -->
+                        <section>
+                            <!-- Title -->
+                            <div class="titles-contain">
+                                <div class="titles-contain__text">
+                                    <h1>REPAIR OF EQUIPMENT FROM VARIOUS
+                                        BRANDS</h1>
+                                </div>
+                            </div>
+
+                            <!-- Swiper -->
+                            <div class="swiper mySwiperTwo device-swiper">
+                                <div class="swiper-wrapper device-swiper__card">
+                                    <div class="swiper-slide">
+                                        <!-- Card 1-->
+                                        <figure class="deviceCard">
+                                            <p class="deviceCard__text">Laptop
+                                                Repair</p>
+                                            <!-- Arrow -->
+                                            <div class="deviceCard__btn">
+                                                <span
+                                                    class="material-symbols-outlined deviceCard__arrow--color">
+                                                    arrow_forward_ios
+                                                </span>
+                                            </div>
+                                        </figure>
+                                    </div>
+                                    <figure class="swiper-slide">
+                                        <!-- Card 2-->
+                                        <div class="deviceCard">
+                                            <p class="deviceCard__text">Tablete
+                                                Repair</p>
+                                            <!-- Arrow -->
+                                            <div class="deviceCard__btn">
+                                                <span
+                                                    class="material-symbols-outlined deviceCard__arrow--color">
+                                                    arrow_forward_ios
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </figure>
+                                    <figure class="swiper-slide">
+                                        <!-- Card 3-->
+                                        <div class="deviceCard">
+                                            <p class="deviceCard__text">PC
+                                                Repair</p>
+                                            <!-- Arrow -->
+                                            <div class="deviceCard__btn">
+                                                <span
+                                                    class="material-symbols-outlined deviceCard__arrow--color">
+                                                    arrow_forward_ios
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </figure>
+                                    <figure class="swiper-slide">
+                                        <!-- Card 3-->
+                                        <div class="deviceCard">
+                                            <p class="deviceCard__text">Desktop
+                                                Repair</p>
+                                            <!-- Arrow -->
+                                            <div class="deviceCard__btn">
+                                                <span
+                                                    class="material-symbols-outlined deviceCard__arrow--color">
+                                                    arrow_forward_ios
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </figure>
+                                </div>
+                                <div
+                                    class="swiper-pagination swiper-pagination-two"></div>
+                            </div>
+                        </section>
+                        <!-- toggle button -->
+                        <button class="btnToggle" id="tongleBtn">
+                            <div class="btnToggle__row" id="btnRow">
+                                <span>&#8250;</span>
+                                <span> &#8250;</span>
+                            </div>
+                            <span id="btnTxt">Show All</span>
+                        </button>
+
+                        <section>
+                            <!-- Title -->
+                            <div class="titles-contain">
+                                <div class="titles-contain__text">
+                                    <h1>SERVICE PRICES</h1>
+                                </div>
+                            </div>
+                            <!-- Service price of mobile -->
+                            <div class="m-service-price">
+                                <!-- Swiper -->
+                                <div class="swiper mySwiperThree device-swiper">
+                                    <div
+                                        class="swiper-wrapper device-swiper__card">
+                                        <figure class="swiper-slide">
+                                            <!-- Card 1-->
+                                            <div class="card-prices">
+                                                <article
+                                                    class="card-prices__contain--txt">
+                                                    <h3>Repair Services</h3>
+                                                    <p>Testing with a technical
+                                                        report issuance</p>
+                                                    <h3>Price</h3>
+                                                    <p>Free</p>
+                                                    <h3>Time</h3>
+                                                    <p>30-120min</p>
+                                                </article>
+                                                <button
+                                                    class="card-prices__contain--btn">
+                                                    ORDER
+                                                    <span
+                                                        class="material-symbols-outlined card-prices__contain--btn--color">
+                                                        arrow_forward_ios
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </figure>
+                                        <figure class="swiper-slide">
+                                            <!-- Card 2-->
+                                            <div class="card-prices">
+                                                <article
+                                                    class="card-prices__contain--txt">
+                                                    <h3>Repair Services</h3>
+                                                    <p>Diagnostics</p>
+                                                    <h3>Price</h3>
+                                                    <p>Free</p>
+                                                    <h3>Time</h3>
+                                                    <p>30min</p>
+                                                </article>
+                                                <button
+                                                    class="card-prices__contain--btn">
+                                                    ORDER
+                                                    <span
+                                                        class="material-symbols-outlined card-prices__contain--btn--color">
+                                                        arrow_forward_ios
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </figure>
+                                        <figure class="swiper-slide">
+                                            <!-- Card 3-->
+                                            <div class="card-prices">
+                                                <article
+                                                    class="card-prices__contain--txt">
+                                                    <h3>Repair Services</h3>
+                                                    <p>Display Replacement</p>
+                                                    <h3>Price</h3>
+                                                    <p>1 000 ₽</p>
+                                                    <h3>Time</h3>
+                                                    <p>30-120min</p>
+                                                </article>
+                                                <button
+                                                    class="card-prices__contain--btn">
+                                                    ORDER
+                                                    <span
+                                                        class="material-symbols-outlined card-prices__contain--btn--color">
+                                                        arrow_forward_ios
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </figure>
+                                    </div>
+                                    <div
+                                        class="swiper-pagination swiper-pagination-three"></div>
+                                </div>
+                            </section>
+                            <div class="d-service-price">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Repair Services</th>
+                                            <th>Price</th>
+                                            <th>Time</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Diagnostics</td>
+                                            <td>Free</td>
+                                            <td>30 min</td>
+                                            <td>
+                                                <button
+                                                class="card-prices__contain--btn">
+                                                ORDER
+                                                <span
+                                                    class="material-symbols-outlined card-prices__contain--btn--color">
+                                                    arrow_forward_ios
+                                                </span>
+                                            </button> 
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Display Replacement</td>
+                                            <td>1 000 ₽</td>
+                                            <td>30-120 min</td>
+                                            <td>
+                                                <button
+                                                class="card-prices__contain--btn">
+                                                ORDER
+                                                <span
+                                                    class="material-symbols-outlined card-prices__contain--btn--color">
+                                                    arrow_forward_ios
+                                                </span>
+                                            </button> 
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Polyphonic Speaker Replacement</td>
+                                            <td>1 000 ₽</td>
+                                            <td>30-120 min</td>
+                                            <td>
+                                                <button
+                                                class="card-prices__contain--btn">
+                                                ORDER
+                                                <span
+                                                    class="material-symbols-outlined card-prices__contain--btn--color">
+                                                    arrow_forward_ios
+                                                </span>
+                                            </button> 
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Testing with a technical report issuance</td>
+                                            <td>1 000 ₽</td>
+                                            <td>30-120 min</td>
+                                            <td>
+                                                <button
+                                                class="card-prices__contain--btn">
+                                                ORDER
+                                                <span
+                                                    class="material-symbols-outlined card-prices__contain--btn--color">
+                                                    arrow_forward_ios
+                                                </span>
+                                            </button> 
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Software Replacement</td>
+                                            <td>1 000 ₽</td>
+                                            <td>30-120 min</td>
+                                            <td>
+                                                <button
+                                                class="card-prices__contain--btn">
+                                                ORDER
+                                                <span
+                                                    class="material-symbols-outlined card-prices__contain--btn--color">
+                                                    arrow_forward_ios
+                                                </span>
+                                            </button> 
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                
+                            </div>
+                            <article class="prices__article">
+                                <p>All prices are inclusive of VAT. Repair cost is stated for a single service. For a commercial offer on ongoing maintenance, please submit a request.</p>
+                                <h3>Get a Commercial Offer" or "Request a Commercial Proposal</h3>
+                            </article>
+                        </main>
+                        <footer class="footer__contain">
+                            <h3>© 2019 CPS  Developed by the Apesong</h3>
+                            <h3>Privacy Policy</h3>
+                            <h3>The information posted on this page does not constitute a public offer.</h3>
+                        </footer>
+
+
+
