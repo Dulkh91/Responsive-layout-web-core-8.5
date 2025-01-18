@@ -50,6 +50,7 @@
     top: 0;
     /* display: none; */
     z-index: 30;
+    display: none;
     overflow: hidden;
   }
 

@@ -1,83 +1,53 @@
-let btn = document.querySelectorAll("#tongleBtn");
-let txtValue = document.querySelectorAll("#btnTxt");
-let cards = document.querySelector(".cards");
+// const { document } = require("postcss");
+
 let swiperInstance, swiperTwo, swiperThree;
-const newCard = `
-               <div class="swiper-slide addCard">
-                        <div class="card">
-                            <img src="./image/samsung.png" alt>
-                            <div class="card__circle">
-                                <span
-                                    class="material-symbols-outlined deviceCard__arrow--color">
-                                                    arrow_forward_ios
-                                </span>
-                            </div>
-                        </div>
-                 </div>     
-                 <div class="swiper-slide addCard">
-                        <div class="card">
-                            <img src="./image/accer.png" alt>
-                            <div class="card__circle">
-                                <span
-                                    class="material-symbols-outlined deviceCard__arrow--color">
-                                                    arrow_forward_ios
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                <div class="swiper-slide addCard">
-                        <div class="card">
-                            <img src="./image/lenovo.png" alt>
-                            <div class="card__circle">
-                                <span
-                                    class="material-symbols-outlined deviceCard__arrow--color">
-                                                    arrow_forward_ios
-                                </span>
-                            </div>
-                        </div>
-                    </div>`;
 
 //Delare value of card-prices on screen
 let numberCards = 4;
-pricesToggle(numberCards);
+let producmNumer = 8;
 
 // Toggle Button Logic & Set value button by index
-let btnTongles = Array(btn.length).fill(false);
-btn.forEach((e, index) => {
-  e.addEventListener("click", () => {
-    numberCards = 7;
+const articleWrap = document.querySelector(".text__wrap")
+let btn = document.querySelectorAll("#tongleBtn");
+const readTxt = document.querySelector(".readMore");
+const btnRow = document.querySelectorAll("#btnRow");
+let showTxt = document.querySelectorAll("#btnTxt");
+const cardItem = document.querySelectorAll("#productCard");
+pricesToggle(numberCards);
+cardProduct(producmNumer);
 
-    if (!btnTongles[index]) {
-      btnTongles[index] = true;
-      //update text when click btn
-      txtValue[index].innerHTML = "Hide";
-      numberCards = 7;
+btn.forEach((item, index) => {
+  item.addEventListener("click", () => {
+    const revestIndex = showTxt.length - 1 - index;
+    switch (index) {
+      case 0:
+        readTxt.textContent = (readTxt.textContent === "Read more") ? "Less" : "Read more";
+        btnRow[index].style.transform = (readTxt.textContent === "Read more")? "rotate(90deg)": "rotate(-90deg)";
+        articleWrap.style.display  =  (readTxt.textContent === "Read more")? "none":"block";
 
-      //change event btn when click
-      document.querySelectorAll("#btnRow")[index].style.transform =
-        "rotate(-90deg)";
+        break;
+      case 1:
+        showTxt[revestIndex].textContent = (showTxt[revestIndex].textContent === "Show All")? "Hide" : "Show All";
+        btnRow[index].style.transform = (showTxt[revestIndex].textContent === "Show All")? "rotate(90deg)": "rotate(-90deg)";
+        producmNumer = (showTxt[revestIndex].textContent === "Show All")? producmNumer = 8: producmNumer = cardItem.length
+        break;
+      case 2:
+        // Text toggle
+        showTxt[1].textContent =
+          showTxt[1].textContent === "Show All" ? "Hide" : "Show All";
+        // arrow icon toggle
+        btnRow[index].style.transform =
+          showTxt[1].textContent === "Show All"? "rotate(90deg)": "rotate(-90deg)";
+        // Show & hid cards
+        numberCards =
+          showTxt[1].textContent === "Show All"
+            ? (numberCards = 4)
+            : (numberCards = 7);
 
-      if (index === 0) {
-        cards.insertAdjacentHTML("beforeend", newCard);
-      }
-    } else {
-      btnTongles[index] = false;
-      txtValue[index].innerHTML = "Read more";
-      numberCards = 4;
-      txtValue[index].innerHTML = "Show All";
-
-      // Rotate the clicked button's row back
-      document.querySelectorAll("#btnRow")[index].style.transform =
-        "rotate(90deg)";
-
-      // Remove cards if this is the first button
-      if (index === 0) {
-        const toggleCard = cards.querySelectorAll(".addCard");
-        toggleCard.forEach((cardAdd) => cardAdd.remove());
-      }
+        break;
     }
     pricesToggle(numberCards);
+    cardProduct(producmNumer);
   });
 });
 
@@ -141,8 +111,21 @@ window.onresize = widthOfScreen;
 function pricesToggle(maxCardPrice) {
   const cardPrices = document.querySelectorAll(".deviceCard");
   cardPrices.forEach((item, index) => {
+    // if (index >= maxCardPrice) {
+    //   //if true we take item by number and left add "none"
+    //   item.style.display = "none";
+    // } else {
+    //   item.style.display = "block";
+    // }
+
+    /* ternary operator: */
+    item.style.display = index >= maxCardPrice ? "none" : "block";
+  });
+}
+
+function cardProduct(maxCardPrice) {
+  cardItem.forEach((item, index) => {
     if (index >= maxCardPrice) {
-      //if true we take item by number and left add "none"
       item.style.display = "none";
     } else {
       item.style.display = "block";
@@ -153,49 +136,47 @@ function pricesToggle(maxCardPrice) {
 // BURGER Button Navbar
 const sidebar = document.querySelector(".sibebar");
 const asideContain = document.querySelector(".aside__container");
-
-document.querySelector(".burger__btn").addEventListener("click", () => {
-  sidebar.style.display = "block";
-  asideContain.classList.add("nabar-popup");
-  // body.style.backgroundColor = "red"
+//berger mobile
+document.querySelectorAll(".burger__btn").forEach((item) => {
+  item.addEventListener("click", () => {
+    sidebar.style.display = "block";
+    asideContain.classList.add("nabar-popup");
+  });
 });
-
-
 // BURGER CLOSE Navbar
 document.querySelector(".close__btn").addEventListener("click", (event) => {
-  asideContain.classList.remove("nabar-popup")
-  if(event.target !=asideContain){
-    sidebar.style.display = "none"
+  asideContain.classList.remove("nabar-popup");
+  if (event.target != asideContain) {
+    sidebar.style.display = "none";
   }
 });
 
-// SIDEBAR RIGHT SHOW 
+// SIDEBAR RIGHT SHOW
 //repair show
-const sibebarRight = document.querySelector(".sidebar-right")
-const cardBar = document.querySelector(".submit__container")
-document.querySelector(".repair__btn").addEventListener("click",()=>{
-    cardBar.style.display = "block"
-    sibebarRight.classList.add("nabar-popup")
-})
-//show tablet 
-document.querySelector(".repair__btn--tablet").addEventListener("click",()=>{
-  cardBar.style.display = "block"
-  sibebarRight.classList.add("nabar-popup")
-})
+const sibebarRight = document.querySelector(".sidebar-right");
+const cardBar = document.querySelector(".submit__container");
+document.querySelector(".repair__btn").addEventListener("click", () => {
+  cardBar.style.display = "block";
+  sibebarRight.classList.add("nabar-popup");
+});
+//show tablet
+document.querySelector(".repair__btn--tablet").addEventListener("click", () => {
+  cardBar.style.display = "block";
+  sibebarRight.classList.add("nabar-popup");
+});
 //SIDEBAR RIGHT HIDE
-document.querySelectorAll(".close__btn--right").forEach((item)=>{
-  item.addEventListener("click",()=>{
-    cardBar.style.display = "none"
-    sibebarRight.classList.remove("nabar-popup")
+document.querySelectorAll(".close__btn--right").forEach((item) => {
+  item.addEventListener("click", () => {
+    cardBar.style.display = "none";
+    sibebarRight.classList.remove("nabar-popup");
     //cards order call
-    document.querySelector(".order__container").style.display = "none"
-  })
-})
+    document.querySelector(".order__container").style.display = "none";
+  });
+});
 // order show
-document.querySelectorAll(".order__btn").forEach((item)=>{
-    item.addEventListener("click",()=>{
-      document.querySelector(".order__container").style.display = "block"
-      sibebarRight.classList.add("nabar-popup")
-    })
-})
-
+document.querySelectorAll(".order__btn").forEach((item) => {
+  item.addEventListener("click", () => {
+    document.querySelector(".order__container").style.display = "block";
+    sibebarRight.classList.add("nabar-popup");
+  });
+});

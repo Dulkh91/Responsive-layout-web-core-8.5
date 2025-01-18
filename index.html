@@ -68,7 +68,7 @@
                     <!-- Mobile -->
                     <div class="navBar--mobile">
                         <ul class="mobile--items">
-                            <li><img src="./image/burger.jpg" alt /></li>
+                            <li><img src="./image/burger.jpg" class="burger__btn" alt /></li>
                             <li><img src="./image/Group.jpg" alt /></li>
                             <!-- seperate  bar-->
                             <li class="navBar--mobile__line"></li>
@@ -211,17 +211,24 @@
                         <p>
                             We have been operating successfully since 1992 and
                             have earned a
-                            reputation as a reliable partner.<span>
+                            reputation as a reliable partner.<span class="text__wrap">
                                 We take pride in the fact that people come to us
                                 based on
                                 recommendations and, in turn, recommend us to
                                 their family and
                                 friends.</span>
                         </p>
-
-                        <button class="articles__button">
-                            <img src="./image/expand.png" alt />Read more
+                        <button class="btnToggle" id="tongleBtn">
+                            <div class="btnToggle__row" id="btnRow">
+                                <span>&#8250;</span>
+                                <span> &#8250;</span>
+                            </div>
+                            <span class="readMore">Read more</span>
                         </button>
+
+                        <!-- <button class="articles__button">
+                            <img src="./image/expand.png" alt />Read more
+                        </button> -->
                     </article>
                     <div class="articles__image">
                         <img src="./image/Picture Copy.jpg" alt />
@@ -242,7 +249,7 @@
                                 <div class="swiper mySwiper">
                                     <!-- Add Card -->
                                     <div class="cards">
-                                        <div class="swiper-slide">
+                                        <div class="swiper-slide" id="productCard">
                                             <div class="card">
                                                 <img src="./image/lenovo.png"
                                                     alt />
@@ -254,7 +261,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="swiper-slide">
+                                        <div class="swiper-slide" id="productCard">
                                             <div class="card">
                                                 <img src="./image/hp.png" alt />
                                                 <div class="card__circle">
@@ -265,7 +272,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="swiper-slide">
+                                        <div class="swiper-slide" id="productCard">
                                             <div class="card">
                                                 <img src="./image/apple.png"
                                                     alt />
@@ -277,7 +284,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="swiper-slide">
+                                        <div class="swiper-slide" id="productCard">
                                             <div class="card">
                                                 <img src="./image/accer.png"
                                                     alt />
@@ -289,7 +296,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="swiper-slide">
+                                        <div class="swiper-slide" id="productCard">
                                             <div class="card">
                                                 <img src="./image/samsung.png"
                                                     alt />
@@ -301,7 +308,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="swiper-slide">
+                                        <div class="swiper-slide" id="productCard">
                                             <div class="card">
                                                 <img src="./image/bosch.png"
                                                     alt />
@@ -313,7 +320,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="swiper-slide">
+                                        <div class="swiper-slide" id="productCard">
                                             <div class="card">
                                                 <img src="./image/sony.png"
                                                     alt />
@@ -325,7 +332,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="swiper-slide">
+                                        <div class="swiper-slide" id="productCard">
                                             <div class="card">
                                                 <img src="./image/viewSonic.png"
                                                     alt />
@@ -337,6 +344,55 @@
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <div class="swiper-slide" id="productCard">
+                                            <div class="card">
+                                                <img src="./image/lenovo.png"
+                                                    alt />
+                                                <div class="card__circle">
+                                                    <span
+                                                        class="material-symbols-outlined deviceCard__arrow--color">
+                                                        arrow_forward_ios
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide" id="productCard">
+                                            <div class="card">
+                                                <img src="./image/hp.png" alt />
+                                                <div class="card__circle">
+                                                    <span
+                                                        class="material-symbols-outlined deviceCard__arrow--color">
+                                                        arrow_forward_ios
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide" id="productCard">
+                                            <div class="card">
+                                                <img src="./image/apple.png"
+                                                    alt />
+                                                <div class="card__circle">
+                                                    <span
+                                                        class="material-symbols-outlined deviceCard__arrow--color">
+                                                        arrow_forward_ios
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide" id="productCard">
+                                            <div class="card">
+                                                <img src="./image/accer.png"
+                                                    alt />
+                                                <div class="card__circle">
+                                                    <span
+                                                        class="material-symbols-outlined deviceCard__arrow--color">
+                                                        arrow_forward_ios
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                     </div>
                                     <div
                                         class="swiper-pagination swiper-pagination-one pagination"></div>
