@@ -509,6 +509,7 @@ form textarea{
 .card__send--btn{
   display: flex;
   justify-content: end;
+  
 }
 /* FOOTER  */
 .footer__contain{

@@ -1,20 +1,48 @@
-// const { document } = require("postcss");
-
 let swiperInstance, swiperTwo, swiperThree;
 
 //Delare value of card-prices on screen
 let numberCards = 4;
 let producmNumer = 8;
 
-// Toggle Button Logic & Set value button by index
+// Toggle Button Show & hide cards
 const articleWrap = document.querySelector(".text__wrap")
 let btn = document.querySelectorAll("#tongleBtn");
 const readTxt = document.querySelector(".readMore");
 const btnRow = document.querySelectorAll("#btnRow");
 let showTxt = document.querySelectorAll("#btnTxt");
+
+const cardPrices = document.querySelectorAll(".deviceCard");
 const cardItem = document.querySelectorAll("#productCard");
 pricesToggle(numberCards);
 cardProduct(producmNumer);
+
+
+function pricesToggle(maxCardPrice) {
+  cardPrices.forEach((item, index) => {
+    // if (index >= maxCardPrice) {
+    //   //if true we take item by number and left add "none"
+    //   item.style.display = "none";
+    // } else {
+    //   item.style.display = "block";
+    // }
+
+    /* ternary operator: */
+    item.style.display = index >= maxCardPrice ? "none" : "block";
+  });
+}
+
+function cardProduct(maxCardPrice) {
+  cardItem.forEach((item, index) => {
+    if (index >= maxCardPrice) {
+      item.style.display = "none";
+    } else {
+      item.style.display = "block";
+    }
+  });
+}
+
+
+
 
 btn.forEach((item, index) => {
   item.addEventListener("click", () => {
@@ -39,10 +67,7 @@ btn.forEach((item, index) => {
         btnRow[index].style.transform =
           showTxt[1].textContent === "Show All"? "rotate(90deg)": "rotate(-90deg)";
         // Show & hid cards
-        numberCards =
-          showTxt[1].textContent === "Show All"
-            ? (numberCards = 4)
-            : (numberCards = 7);
+        numberCards = showTxt[1].textContent === "Show All" ? numberCards = 4:numberCards = 7;
 
         break;
     }
@@ -50,6 +75,7 @@ btn.forEach((item, index) => {
     cardProduct(producmNumer);
   });
 });
+
 
 // Manage Swiper Based on Screen Size
 function widthOfScreen() {
@@ -108,34 +134,12 @@ function widthOfScreen() {
 window.onload = widthOfScreen;
 window.onresize = widthOfScreen;
 
-function pricesToggle(maxCardPrice) {
-  const cardPrices = document.querySelectorAll(".deviceCard");
-  cardPrices.forEach((item, index) => {
-    // if (index >= maxCardPrice) {
-    //   //if true we take item by number and left add "none"
-    //   item.style.display = "none";
-    // } else {
-    //   item.style.display = "block";
-    // }
 
-    /* ternary operator: */
-    item.style.display = index >= maxCardPrice ? "none" : "block";
-  });
-}
-
-function cardProduct(maxCardPrice) {
-  cardItem.forEach((item, index) => {
-    if (index >= maxCardPrice) {
-      item.style.display = "none";
-    } else {
-      item.style.display = "block";
-    }
-  });
-}
 
 // BURGER Button Navbar
 const sidebar = document.querySelector(".sibebar");
 const asideContain = document.querySelector(".aside__container");
+const orderSidebar = document.querySelector(".order__container")
 //berger mobile
 document.querySelectorAll(".burger__btn").forEach((item) => {
   item.addEventListener("click", () => {
@@ -152,9 +156,17 @@ document.querySelector(".close__btn").addEventListener("click", (event) => {
 });
 
 // SIDEBAR RIGHT SHOW
-//repair show
 const sibebarRight = document.querySelector(".sidebar-right");
 const cardBar = document.querySelector(".submit__container");
+//repair mobile show 
+document.querySelector(".repair__btn--m").addEventListener("click",()=>{
+  cardBar.style.display = "block";
+})
+// order mobile show 
+document.querySelector(".order__btn--m").addEventListener("click",()=>{
+  orderSidebar.style.display = "block";
+})
+//repair desktop show
 document.querySelector(".repair__btn").addEventListener("click", () => {
   cardBar.style.display = "block";
   sibebarRight.classList.add("nabar-popup");
@@ -173,10 +185,10 @@ document.querySelectorAll(".close__btn--right").forEach((item) => {
     document.querySelector(".order__container").style.display = "none";
   });
 });
-// order show
+// order tablet & desktop show 
 document.querySelectorAll(".order__btn").forEach((item) => {
   item.addEventListener("click", () => {
-    document.querySelector(".order__container").style.display = "block";
+    orderSidebar.style.display = "block";
     sibebarRight.classList.add("nabar-popup");
   });
 });

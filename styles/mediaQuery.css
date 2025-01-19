@@ -133,6 +133,16 @@
 .d-service-price{
   display: none;
 }
+.submit__container, 
+.order__container{
+  width: 100%;
+  overflow-x: hidden;
+}
+.card__send--btn{
+  position: relative;
+  padding: 30px;
+  margin:  30px 0;
+}
 
 /* FOOTER SIDE */
 .footer__contain{
