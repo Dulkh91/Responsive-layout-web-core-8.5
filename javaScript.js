@@ -2,7 +2,7 @@ let swiperInstance, swiperTwo, swiperThree;
 
 //Delare value of card-prices on screen
 let numberCards = 4;
-let producmNumer = 8;
+let productNumber = 8;
 
 // Toggle Button Show & hide cards
 const articleWrap = document.querySelector(".text__wrap")
@@ -14,8 +14,7 @@ let showTxt = document.querySelectorAll("#btnTxt");
 const cardPrices = document.querySelectorAll(".deviceCard");
 const cardItem = document.querySelectorAll("#productCard");
 pricesToggle(numberCards);
-cardProduct(producmNumer);
-
+cardProduct(productNumber);
 
 function pricesToggle(maxCardPrice) {
   cardPrices.forEach((item, index) => {
@@ -43,7 +42,6 @@ function cardProduct(maxCardPrice) {
 
 
 
-
 btn.forEach((item, index) => {
   item.addEventListener("click", () => {
     const revestIndex = showTxt.length - 1 - index;
@@ -57,7 +55,7 @@ btn.forEach((item, index) => {
       case 1:
         showTxt[revestIndex].textContent = (showTxt[revestIndex].textContent === "Show All")? "Hide" : "Show All";
         btnRow[index].style.transform = (showTxt[revestIndex].textContent === "Show All")? "rotate(90deg)": "rotate(-90deg)";
-        producmNumer = (showTxt[revestIndex].textContent === "Show All")? producmNumer = 8: producmNumer = cardItem.length
+        productNumber = (showTxt[revestIndex].textContent === "Show All")? 8: cardItem.length
         break;
       case 2:
         // Text toggle
@@ -67,14 +65,15 @@ btn.forEach((item, index) => {
         btnRow[index].style.transform =
           showTxt[1].textContent === "Show All"? "rotate(90deg)": "rotate(-90deg)";
         // Show & hid cards
-        numberCards = showTxt[1].textContent === "Show All" ? numberCards = 4:numberCards = 7;
+        numberCards = showTxt[1].textContent === "Show All" ? 4: cardPrices.length;
 
         break;
     }
     pricesToggle(numberCards);
-    cardProduct(producmNumer);
+    cardProduct(productNumber);
   });
 });
+
 
 
 // Manage Swiper Based on Screen Size
@@ -84,6 +83,8 @@ function widthOfScreen() {
   const sizeWidth = window.innerWidth;
 
   if (sizeWidth <= 767) {
+    numberCards = cardPrices.length
+
     if (!cards.classList.contains("swiper-wrapper")) {
       cards.classList.add("swiper-wrapper");
       card.forEach((item) => item.classList.add("swiper-slide"));
@@ -118,6 +119,8 @@ function widthOfScreen() {
     cards.classList.remove("swiper-wrapper");
     card.forEach((item) => item.classList.remove("swiper-slide"));
 
+     numberCards = 4
+     
     // Destroy Swiper Instance
     if (swiperInstance) {
       swiperInstance.destroy(true, true);
@@ -130,6 +133,8 @@ function widthOfScreen() {
       swiperThree = null;
     }
   }
+  pricesToggle(numberCards)
+
 }
 window.onload = widthOfScreen;
 window.onresize = widthOfScreen;
