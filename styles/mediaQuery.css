@@ -11,6 +11,7 @@
   .articles__image {
     width: 100%;
     float: none;
+    margin: 0 5px auto;
   }
   .articles__text p {
     margin: 10px;
@@ -237,7 +238,8 @@
   }
   .container__card-lists {
     flex-grow: 1;
-    flex-basis: 200;
+    width: 100%;
+    max-width: 100%;
   }
   
   /* Device repair of swiper */
@@ -296,6 +298,7 @@
   .container__card-lists {
     flex-grow: 1;
     flex-basis: 200;
+
   }
 
 
